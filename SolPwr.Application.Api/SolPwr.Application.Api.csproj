@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>$(MasterNamespace).Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SolPwr.AuthModel.Orm\SolPwr.AuthModel.csproj" />
+    <ProjectReference Include="..\SolPwr.BusinessLogic\SolPwr.BusinessLogic.csproj" />
+    <ProjectReference Include="..\SolPwr.DomainModel.Orm\SolPwr.DomainModel.Orm.csproj" />
+    <ProjectReference Include="..\SolPwr.Integrations.Core\SolPwr.Integrations.Core.csproj" />
+  </ItemGroup>
+
+</Project>
